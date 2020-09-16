@@ -38,7 +38,7 @@ $(document).ready(function() {
   // Esercizio 3: Dare la possibilità all’utente attraverso 3 prompt di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
   var inputName = prompt("Inserisci il nome:");
   var inputSurname = prompt("Inserisci il cognome:");
-  var inputAge = prompt("Inserisci l'età:");
+  var inputAge = parseInt(prompt("Inserisci l'età:"));
 
   var totalInput = {
     "nome" : inputName,
@@ -51,7 +51,8 @@ $(document).ready(function() {
   for (var i = 0; i < studenti.length; i++) {
     var context = {
       "name" : studenti[i]["nome"],
-      "surname" : studenti[i]["cognome"]
+      "surname" : studenti[i]["cognome"],
+      "age" : studenti[i]["eta"]
     }
     var visual = template(context);
 
